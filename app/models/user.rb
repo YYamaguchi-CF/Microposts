@@ -8,4 +8,6 @@ class User < ApplicationRecord
     
   # パスワードダイジェストには必須
   has_secure_password
+  
+  has_many :microposts
 end
