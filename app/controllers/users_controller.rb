@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :require_user_logged_in, only: [:index, :show, :edit]
+  before_action :require_user_logged_in, only: [:index, :show, :edit, :destroy, :followings, :followers]
   
   def index
     @users = User.order(id: :desc).page(params[:page]).per(20)
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     
     if @user.save
-      flash[:successs] = 'ユーザを登録しました。'
+      flash[:success] = 'ユーザを登録しました。'
       redirect_to @user
     else
       flash.now[:danger] = 'ユーザの登録に失敗しました。'
@@ -50,6 +50,18 @@ class UsersController < ApplicationController
     
     flash[:dark] = '自分のアカウントを削除しました。'
     redirect_to :signup
+  end
+  
+  def followings
+    @user = User.find(params[:id])
+    @followings = @user.followings.page(params[:page])
+    counts(@user)
+  end
+  
+  def followers
+    @user = User.find(params[:id])
+    @followers = @user.followers.page(params[:page])
+    counts(@user)
   end
 
   private
