@@ -11,7 +11,7 @@ class User < ApplicationRecord
   
   has_many :microposts
   # お気に入り
-  has_many :favorites
+  has_many :favorites, dependent: :destroy
   has_many :microfavos, through: :favorites, source: :micropost
   
   has_many :relationships

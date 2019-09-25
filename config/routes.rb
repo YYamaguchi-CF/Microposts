@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   
   # Userルート
   get 'signup', to: 'users#new'
-  resources :users do
+  resources :users, except: [:destroy] do
   	member do
   		get :followings
   		get :followers

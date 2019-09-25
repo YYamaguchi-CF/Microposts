@@ -44,13 +44,13 @@ class UsersController < ApplicationController
     end
   end
   
-  def destroy
-    @user = User.find(params[:id])
-    @user.destroy
-    
-    flash[:dark] = '自分のアカウントを削除しました。'
-    redirect_to :signup
-  end
+#  def destroy
+#    @user = User.find(params[:id])
+#    @user.destroy
+#    
+#    flash[:dark] = '自分のアカウントを削除しました。'
+#    redirect_to :signup
+#  end
   
   def followings
     @user = User.find(params[:id])
