@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   
   # Userルート
   get 'signup', to: 'users#new'
-  resources :users, except: [:destroy] do
+  resources :users, except: [:edit , :update, :destroy] do
   	member do
   		get :followings
   		get :followers
@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
   resources :favorites, only: [:create, :destroy]
+  resource :account, only: [:edit, :update]
+  resource :password, only: [:show, :edit, :update]
 end

@@ -4,10 +4,6 @@ module SessionsHelper
     end
     
     def logged_in?
-    	if current_user
-  			return true
-			else
-  			return false
-			end
+    	!!current_user
     end
 end

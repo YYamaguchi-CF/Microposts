@@ -27,23 +27,6 @@ class UsersController < ApplicationController
     end
   end
   
-  def edit
-    @user = User.find(params[:id])
-  end
-
-  def update
-    @user = User.find(params[:id])
-    @user.assign_attributes(user_params)
-    
-    if @user.save
-      flash[:success] = 'ユーザ情報を更新しました。'
-      redirect_to @user
-    else
-      flash.now[:danger] = 'ユーザ情報を更新できませんでした。'
-      render 'new'
-    end
-  end
-  
 #  def destroy
 #    @user = User.find(params[:id])
 #    @user.destroy
