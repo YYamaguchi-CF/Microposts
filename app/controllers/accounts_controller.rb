@@ -24,6 +24,7 @@ class AccountsController < ApplicationController
     params.require(:user).permit(
       :name, 
       :email, 
+      :content
       )
   end
 end

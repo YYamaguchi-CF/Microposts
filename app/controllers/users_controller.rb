@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :require_user_logged_in, only: [:index, :show, :edit, :destroy, :followings, :followers]
   
   def index
-    @users = User.order(id: :desc).page(params[:page]).per(20)
+    @users = User.order(id: :desc).page(params[:page]).per(10)
   end
 
   def show
@@ -60,7 +60,7 @@ class UsersController < ApplicationController
       :name, 
       :email, 
       :password, 
-      :password_confirmation
+      :password_confirmation,
       )
   end
 end
