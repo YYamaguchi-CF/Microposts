@@ -9,6 +9,11 @@
         <div>
           <p><%= micropost.content %></p>
         </div>
+        <div>
+	        <% if micropost.micropost_image.attached? %>
+  	     		<%= link_to_if current_user == micropost.user, (image_tag micropost.micropost_image.variant(resize: "200x200")), micropost %>
+    	   	<% end %>
+        </div>
         <div class="row">
         	<div class="col-2 mt-1">
         		<% if current_user == micropost.user %>

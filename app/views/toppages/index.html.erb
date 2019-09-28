@@ -8,7 +8,12 @@
         <div class="form-group">
           <%= f.text_area :content, class: 'form-control', rows: 5 %>
         </div>
-        <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
+				<div class="upload-btn-wrapper">
+				  <button class="btndash">Upload a file</button>
+				  <%= f.file_field :new_micropost_image, accept: 'image/jpeg,image/gif,image/png', onChange:'inform()' %>
+				</div>
+				<h5 id="file_name"></h5>
+        <%= f.submit 'Post', class: 'btn btn-primary btn-block mt-4' %>
       <% end %>
     </aside>
     <div class="col-sm-8">
