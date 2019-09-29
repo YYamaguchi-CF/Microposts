@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby Version
+2.5.3
 
-Things you may want to cover:
+Rails Version
+5.2.3
 
-* Ruby version
+Develop Environment
+AWS Cloud9
 
-* System dependencies
+DataBase Version
+MySQL 5.5.62
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Other
+bootstrap ...etc

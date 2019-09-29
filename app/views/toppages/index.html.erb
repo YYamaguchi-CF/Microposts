@@ -9,10 +9,11 @@
           <%= f.text_area :content, class: 'form-control', rows: 5 %>
         </div>
 				<div class="upload-btn-wrapper">
-				  <button class="btndash">Upload a file</button>
+				  <button class="btndash">Upload a image</button>
 				  <%= f.file_field :new_micropost_image, accept: 'image/jpeg,image/gif,image/png', onChange:'inform()' %>
 				</div>
 				<h5 id="file_name"></h5>
+        <h6>Only one image</h6>
         <%= f.submit 'Post', class: 'btn btn-primary btn-block mt-4' %>
       <% end %>
     </aside>
