@@ -2,7 +2,8 @@ class UsersController < ApplicationController
   before_action :require_user_logged_in, only: [:index, :show, :edit, :destroy, :followings, :followers]
   
   def index
-    @users = User.order(id: :desc).page(params[:page]).per(10)
+    @q = User.order(id: :desc).ransack(params[:q])
+    @users = @q.result(distinct: true).page(params[:page]).per(10)
   end
 
   def show
