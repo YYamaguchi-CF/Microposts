@@ -15,8 +15,11 @@
 *アバター画像(Gravatar)*  
 *デザイン(bootstrap)*  
 *DBトランザクション制御機能*  
-*DBテーブルのリレーション管理*...etc    
+*DBテーブルのリレーション管理*...etc   
+*パスワード再設定機能*  
 *Ruby Version　2.5.3*  
 *Rails Version　5.2.3*  
 *Develop Environment　AWS Cloud9*  
 *DataBase Version　MySQL 5.5.62*  
+*Production Environment　Heroku*  
+*デバッグツール　pry-byebug*  

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'toppages#index'
+  root to: 'sessions#new'
+  
+  get 'toppage', to: 'toppages#index'
   
   # Sessionルート
   get 'login', to: 'sessions#new'
