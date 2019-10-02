@@ -6,12 +6,5 @@ class Micropost < ApplicationRecord
   has_many :favorites, foreign_key: 'micropost_id', dependent: :destroy
   has_many :users, through: :favorites
   
-  has_one_attached :micropost_image
-  attribute :new_micropost_image
-  
-  before_save do
-  	if new_micropost_image
-  		self.micropost_image = new_micropost_image
-  	end
-  end
+  mount_uploader :image, ImageUploader
 end

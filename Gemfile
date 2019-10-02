@@ -60,7 +60,6 @@ gem 'kaminari'
 gem 'pry-byebug', group: :development
 gem 'jquery-rails'
 gem 'ransack'
-gem 'aws-sdk-s3', require: false
 gem 'carrierwave'
 
 group :production do
