@@ -8,7 +8,8 @@
 *ユーザー登録機能*  
 *ユーザログイン機能(Session/bcrypt)*  
 *ユーザ検索機能(ransack)*  
-*画像ファイルアップロード機能(ActiveStorage/AWS S3)*  
+*画像ファイルアップロード機能(~~ActiveStorage~~carrierwabe)*
+*クラウドストレージ(~~AWS S3~~cloudinary)*
 *タイムライン機能*  
 *フォロー、フォロワー機能*  
 *お気に入り登録機能*  
