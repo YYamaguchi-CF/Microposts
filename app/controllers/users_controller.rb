@@ -20,8 +20,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     
     if @user.save
-      flash[:success] = 'ユーザを登録しました。'
-      UserMailer.creation_email(@user).deliver_now
+      flash[:success] = 'ユーザを登録しました。メールを送信しました。'
       redirect_to @user
     else
       flash.now[:danger] = 'ユーザの登録に失敗しました。'

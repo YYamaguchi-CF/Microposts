@@ -5,7 +5,7 @@ class UserMailer < ApplicationMailer
   	@user = user
   	mail(
   		subject: 'ユーザ登録完了メール',
-  		to: '#{@user.email}',
+  		to: @user.email,
   		from: 'microposts@example.com'
   		)
   end
