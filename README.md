@@ -18,6 +18,7 @@
 *DBトランザクション制御機能*  
 *DBテーブルのリレーション管理*...etc   
 *パスワード再設定機能*  
+*新規登録情報メール機能(Action Mailer)*
 *Ruby Version　2.5.3*  
 *Rails Version　5.2.3*  
 *Develop Environment　AWS Cloud9*  
