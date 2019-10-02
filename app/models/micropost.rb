@@ -6,5 +6,5 @@ class Micropost < ApplicationRecord
   has_many :favorites, foreign_key: 'micropost_id', dependent: :destroy
   has_many :users, through: :favorites
   
-  mount_uploader :image, ImageUploader
+  mount_uploader :post_image, ImageUploader
 end

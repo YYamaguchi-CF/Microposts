@@ -10,8 +10,8 @@
           <p><%= micropost.content %></p>
         </div>
         <div>
-	        <% if micropost.image? %>
-  	     		<%= image_tag micropost.image.thumb.url %>
+	        <% if micropost.post_image? %>
+  	     		<%= image_tag micropost.post_image.thumb.url %>
     	   	<% end %>
         </div>
         <div class="row">
