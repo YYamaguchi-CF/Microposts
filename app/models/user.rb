@@ -11,6 +11,9 @@ class User < ApplicationRecord
   attr_accessor :current_password
   validates :password, presence: { if: :current_password }
   
+  #スコープ
+  scope :recent, -> { order(created_at: :desc) }
+  
   has_many :microposts
   # お気に入り
   has_many :favorites, dependent: :destroy

@@ -7,4 +7,7 @@ class Micropost < ApplicationRecord
   has_many :users, through: :favorites
   
   mount_uploader :post_image, ImageUploader
+  
+  #スコープ
+  scope :recent, -> { order(created_at: :desc) }
 end

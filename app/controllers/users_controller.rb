@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @microposts = @user.microposts.order(id: :desc).page(params[:page])
+    @microposts = @user.microposts.recent.page(params[:page])
     counts(@user)
   end
 
