@@ -11,6 +11,8 @@ class AccountsController < ApplicationController
     
     if @user.save
       flash[:success] = 'ユーザ情報を更新しました。'
+      
+      
       redirect_to @user
     else
       flash.now[:danger] = 'ユーザ情報を更新できませんでした。'
