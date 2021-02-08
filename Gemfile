@@ -62,7 +62,7 @@ gem 'kaminari'
 gem 'pry-byebug', group: :development
 gem 'jquery-rails'
 gem 'ransack'
-gem 'carrierwave', '~> 1.3', '>= 1.3.1'
+gem 'carrierwave', '~> 1.3'
 gem 'cloudinary'
 
 group :production do
